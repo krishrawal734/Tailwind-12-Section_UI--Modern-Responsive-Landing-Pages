@@ -1,39 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind</title>
     <!--tailwind linl-->
-     <script src="https://cdn.tailwindcss.com"></script>
-     <!--css link-->
-     <link rel="stylesheet" href="./style.css">
-     <script>
-        tailwind.config ={
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50:'#eef2ff',
-                            100:'#e0e7ff',
-                            200: '#c7d2fe',
-                            300: '#a5b4c',
-                            400: '#818cf8',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            800: '#3730a3',
-                            900: '#312e81',
-                        }
-                    }
-                }
-            }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--css link-->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--1 part navbar-->
 
-        }
-     </script>
-</head>
-<body>
-    
-    
-</body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >VERSION</span
+          >
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Get started
+          </button>
+          <button
+            data-collapse-toggle="navbar-cta"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-cta"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-cta"
+        >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--part-2-->
+    <section class="overflow-hidden container">
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1757137911040-c9d81879b212?q=80&w=840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="hero"
+          class="h-full w-full object-cover"
+        />
+        <div
+          class="absolite inset-0 bg-gradient--to-b form-black/30 via-black/30 to-white/90"
+        ></div>
+      </div>
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-8 lg:py-36"
+      >
+        <div class="max-w-3xl text-white">
+          <p
+            class="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs"
+          >
+            New . v3.0relesed
+          </p>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
+          >
+            Dsign faster with a beautiful,responsive tailwind ui kit
+          </h1>
+          <p class="mt-5 text-lg text-white/90">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            numquam nobis repudiandae cum libero nisi nemo labore neque? Unde,
+            nostrum!
+          </p>
+          <div class="mt-4 flex-wrap gap-3">
+            <button
+              type="button"
+              class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Buy Templates
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              See Features
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--kdm-->
+    <!--part-3-->
+    <section id="features" class="py-10 sm:py-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl text-center mx-auto mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold">
+            Packed with practicle features
+          </h2>
+          <p class="text-slate-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odio
+            nesciunt, eveniet nostrum id consectetur quibusdam. Numquam vel odit
+            tenetur molestias accusamus earum autem tempora eveniet possimus
+            repellendus. Esse, necessitatibus.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
